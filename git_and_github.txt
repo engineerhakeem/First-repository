@@ -1,0 +1,116 @@
+**********************************
+** Config Git:
+
+
+$ git --version				//To show version of git
+
+$ git --help				//To diplay helpful documentation of git
+
+$ git help init				//To get help on paticular command like:init	
+						
+$ git config --global user.name "engineerhakeem"			//To configure git with username
+$ git config --global user.email "abdulhakeemalbayati82@gmail.com"	//To configure git with email
+$ git config --global core.editor "notepad"				//To configure git with favourite editor  			
+
+$ touch list.txt			//To create a file
+				
+$ notepad test.txt			//To edit a file or create it if not be created with (touch).
+
+$ clear					//To clear the screen
+
+$ git config --list			//To show all Git config properties throughout all of the variously scoped Git files.
+
+
+***********************************
+** Basic commands:
+
+
+$ mkdir shop				//To make a directory called like "shop"
+
+$ cd shop				//To change the directory and enter it
+
+$ git init				//To track this directory to know where it is located and initialized an empty repository
+
+$ ls					//To show what is in this directory
+
+$ ls -A					//To show git directory in the origin directory
+
+$ cd .git				//To enter to the origin directory called .git
+
+$ cd ..					//To exit from the last position I entered in it. 
+					//(Don't forget there is a space between cd and ..)
+
+$ rm list.txt				//To remove the file
+
+$ git status				//To show the status of git
+
+$ git add list.txt			//To start Git to track the particular file (like "list.txt). Now when type "git status", we see 					//the file in the green line so this step is called staging area (The working area is where files 					//that are not handled by git. These files are also referred to as "untracked files." Staging area 					//(tracked files) is files that are going to be a part of the next commit, which lets git know 						//what changes in the file are going to occur for the next commit.). 
+
+ 
+$ git commit -m "Create shopping list"  //To commit this file (-m: means put commit or message). 
+					//Everytime we want to add track to another version of the file we must add tarcking by:  						//(git add) command and then committed by the (git commit).
+
+$ git log				//To show what commit and to whom (The history of commit)
+
+
+*****************************************
+** Exploring Git log:
+
+
+$ notepad list.txt			//To add something to the file and after that save and clost it.
+
+$ git status				//Git knows that this file has been changed but it hasn't been told to save a snapshot of this 						//yet.
+
+$ git diff				//To see the differences between the last copy Git tracked and the new one that hasn't been 						//tracked.
+
+$ git log -1				//To display the last snapshot in Git
+
+
+*****************************************
+** Git diff
+
+$ git diff --staged			//To tell us what is the difference between what in the staged before to commit the file and our 					//previous commit.
+
+
+****************************************
+** Head
+
+$ git diff 01f19b3 list.txt		//To tell us what is the difference between that version and the currunt version. (The added items 				  	// in the green color while the deleted items in the red) [The number was taken from the versions 					//that was displayed by "git log"].
+
+$ git checkout HEAD~3 list.txt		//Return to the first version of the file.		
+
+$ notepad list.txt			//after above command, enter to the first version of the file.
+
+
+******************************************
+** Making correction Git reset
+
+$ git reset list.txt 			//When a file has added to the staging area by "git add" and has discovered there is a mistake in 					//it , so it could be changed by "git reset" command to change the fault to unstaging area. (This 					//is usful if only do not use "git commit" just use "git add").
+
+$ git reset Head~1 soft			//it removes the last commit only but it doesn't change what happened in the staging area and 						//doesn't change the file.
+
+$ git reset Head~1 mixed		//it removes the commit and also makes the changes unstaged.
+
+$ git reset Head~1 hard 		//it removes the last changes that was added to the file and also the commit.
+
+
+*******************************************
+** Branching
+
+$ git branch				// To display all branches in the file (if you do not create any branches before then you see only 					the "master"
+$ git branch dairy			// To Create diffrent branch (like different copy) 
+					// If we make some changes on the dairy branch and add commit on it then these changes do not 						//appear in the other branches unless merge it with them (We take how can merge a bit later).
+
+$ git checkout master			// To change between branches
+
+$ git merge dairy 			// To merge master with dairy branch
+
+
+
+
+
+
+					
+
+	
+
